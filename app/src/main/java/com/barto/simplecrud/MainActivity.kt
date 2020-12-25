@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.content.SharedPreferences
 import android.util.TypedValue
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_options.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -52,7 +51,7 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.button1.setOnClickListener {
-            val intent1 = Intent(this, SecondaryActivity::class.java)
+            val intent1 = Intent(this, ListActivity::class.java)
             startActivity(intent1)
         }
 
@@ -73,7 +72,6 @@ class MainActivity : AppCompatActivity() {
         )
 
         val theme1 = sp.getString("themeName", "default")
-//        val font1 = sp2.getString("fontSize1", "default")
 
         binding.test.text = theme1
 

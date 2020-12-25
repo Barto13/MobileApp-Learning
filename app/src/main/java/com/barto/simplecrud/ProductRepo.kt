@@ -11,4 +11,5 @@ class ProductRepo(private val productDAO: ProductDAO) {
     fun update(product: Product) = productDAO.update(product)
 
     fun deleteAll() = productDAO.deleteAll()
+
 }

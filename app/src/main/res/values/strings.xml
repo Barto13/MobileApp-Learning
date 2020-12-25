@@ -34,5 +34,6 @@
     <string name="large_font">Large Font</string>
     <string name="font">Font</string>
     <string name="textview">TextView</string>
+    <string name="addProduct">add</string>
 
 </resources>

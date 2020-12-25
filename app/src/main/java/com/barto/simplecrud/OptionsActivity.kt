@@ -22,8 +22,6 @@ class OptionsActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         binding = ActivityOptionsBinding.inflate(layoutInflater)
 
-//        val intent2 = intent
-
         sp = getSharedPreferences(
                 "Theme", Context.MODE_PRIVATE
         )
@@ -36,14 +34,6 @@ class OptionsActivity : AppCompatActivity(){
             "Green" -> theme.applyStyle(R.style.ThemeGreen, true)
             "Default" -> theme.applyStyle(R.style.Theme_SimpleCRUD, true)
         }
-
-//        when(sp2.getString("fontSize1", "default")){
-//            "FontSizeSmall" -> theme.applyStyle(R.style.FontSizeSmall, true)
-//            "FontSizeLarge" -> theme.applyStyle(R.style.FontSizeLarge, true)
-//        }
-
-
-//        tv_font.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14F)
 
         setContentView(binding.root)
 

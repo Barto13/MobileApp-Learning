@@ -44,9 +44,6 @@ class ProductAdapter(val viewModel: ProductViewModel) : RecyclerView.Adapter<Pro
             "FontSizeLarge" -> fontSize = 28
             "FontSizeDefault" -> fontSize = 14
         }
-//        sp2 = getSharedPreferences(
-//                "Font", Context.MODE_PRIVATE
-//        )
 
         holder.binding.tvId.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize.toFloat())
         holder.binding.tvName.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize.toFloat())
