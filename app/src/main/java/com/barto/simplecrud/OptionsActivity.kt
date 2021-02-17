@@ -71,8 +71,6 @@ class OptionsActivity : AppCompatActivity(){
             sp2.edit().putString(fontSize1, "FontSizeLarge")
         }
 
-
-
         binding.buttonSave.setOnClickListener{
         val intent = intent
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
@@ -87,7 +85,6 @@ class OptionsActivity : AppCompatActivity(){
             finish()
             startActivity(intent)
         }
-
     }
 
     override fun onStart(){

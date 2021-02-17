@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/appWidgetBackgroundColor"
+    android:padding="@dimen/widget_margin"
+    android:theme="@style/ThemeOverlay.SimpleCRUD.AppWidgetContainer">
+
+    <TextView
+        android:id="@+id/widget_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="?attr/appWidgetBackgroundColor"
+        android:contentDescription="@string/appwidget_text"
+        android:text="@string/appwidget_text"
+        android:textColor="?attr/appWidgetTextColor"
+        android:textSize="24sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/widget_bt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/website" />
+
+    <Button
+        android:id="@+id/widget_bt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/smt" />
+
+    <ImageView
+        android:id="@+id/widget_iv"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:contentDescription="@string/image"
+        android:src="@drawable/berserk_armor"
+        tools:srcCompat="@drawable/berserk_armor" />
+
+<!--    app:srcCompat="@drawable/berserk_armor"-->
+    <Button
+        android:id="@+id/widget_bt3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/image1" />
+
+    <Button
+        android:id="@+id/widget_bt4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/image2" />
+</LinearLayout>

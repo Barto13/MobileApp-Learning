@@ -8,6 +8,8 @@ import com.barto.simplecrud.databinding.ActivityMainBinding
 import android.content.Intent;
 import android.content.SharedPreferences
 import android.util.TypedValue
+import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -37,21 +39,20 @@ class MainActivity : AppCompatActivity() {
             "Default" -> theme.applyStyle(R.style.Theme_SimpleCRUD, true)
         }
 
-
         binding.test.text = theme1
+        binding.tv1.text = FirebaseAuth.getInstance().currentUser?.email
 
         setContentView(binding.root)
 
-//        test.setTextSize(TypedValue.COMPLEX_UNIT_SP, 32F)
         when(font1){
             "FontSizeSmall" -> test.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20F)
             "FontSizeLarge" -> test.setTextSize(TypedValue.COMPLEX_UNIT_SP, 32F)
             "FontSizeDefault" -> test.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14F)
         }
 
-
         binding.button1.setOnClickListener {
             val intent1 = Intent(this, ListActivity::class.java)
+            intent1.putExtra("user", binding.tv1.text)
             startActivity(intent1)
         }
 
@@ -60,6 +61,22 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent2)
         }
 
+        binding.btLogout.setOnClickListener{
+            FirebaseAuth.getInstance().signOut()
+            Toast.makeText(this, "User logged out! ", Toast.LENGTH_SHORT).show()
+            val intent2 = Intent(this, LoginActivity::class.java)
+            startActivity(intent2)
+        }
+
+        binding.btMaps.setOnClickListener{
+            val intent = Intent(this, MapsActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btShopList.setOnClickListener{
+            val intent = Intent(this, ShopListActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onStart() {
@@ -72,7 +89,6 @@ class MainActivity : AppCompatActivity() {
         )
 
         val theme1 = sp.getString("themeName", "default")
-
         binding.test.text = theme1
 
     }

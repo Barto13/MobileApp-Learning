@@ -28,12 +28,11 @@
             android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="140dp"
-            android:layout_marginTop="388dp"
-            android:layout_marginEnd="140dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="332dp"
+            android:layout_marginEnd="23dp"
             android:text="@string/list_products"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.526"
+            app:layout_constraintEnd_toStartOf="@+id/bt_shopList"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv1" />
 
@@ -41,11 +40,9 @@
             android:id="@+id/button_options"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="156dp"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="24dp"
-            android:layout_marginEnd="156dp"
             android:text="@string/options"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button1" />
 
@@ -58,6 +55,36 @@
             android:layout_marginEnd="200dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+        <Button
+            android:id="@+id/bt_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/logout"
+            app:layout_constraintStart_toEndOf="@+id/button_options"
+            app:layout_constraintTop_toBottomOf="@+id/button1" />
+
+        <Button
+            android:id="@+id/bt_maps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/maps"
+            app:layout_constraintStart_toEndOf="@+id/bt_logout"
+            app:layout_constraintTop_toBottomOf="@+id/button1" />
+
+        <Button
+            android:id="@+id/bt_shopList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="332dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/list_shops"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv1" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

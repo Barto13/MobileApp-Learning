@@ -13,7 +13,7 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-    
+
     <style name="ThemeRed" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/red2</item>
@@ -43,9 +43,11 @@
     <style name="FontSizeSmall">
         <item name="android:textSize">12dp</item>
     </style>
+
     <style name="FontSizeMedium" parent="TextAppearance.AppCompat">
         <item name="android:textSize">16sp</item>
     </style>
+
     <style name="FontSizeLarge">
         <item name="android:textSize">32dp</item>
     </style>
@@ -59,4 +61,9 @@
     <style name="Theme.SimpleCRUD.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.SimpleCRUD.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ThemeOverlay.SimpleCRUD.AppWidgetContainer" parent="">
+        <item name="appWidgetBackgroundColor">@color/light_blue_600</item>
+        <item name="appWidgetTextColor">@color/light_blue_50</item>
+    </style>
 </resources>
